@@ -26,37 +26,53 @@ Administrators can manage users, item posts, claims, and contact messages throug
 
 # 📸 Application Screenshots
 
-### 🏠 Home / Dashboard
+### 🏠 Home 
 
-![Home Dashboard](screenshots/home.png)
+<img width="1917" height="963" alt="image" src="https://github.com/user-attachments/assets/40abf92b-62b8-42a9-8874-b6b36202957d" />
+
 
 ### 🔍 Browse Items
 
-![Browse Items](screenshots/browse-items.png)
+<img width="1912" height="972" alt="image" src="https://github.com/user-attachments/assets/1a705c74-f332-4fe8-9278-616dd71a4200" />
+
 
 ### 📦 Item Details
 
-![Item Details](screenshots/item-details.png)
+<img width="1908" height="972" alt="image" src="https://github.com/user-attachments/assets/c480847c-8b02-422c-b6b7-58fe81771f28" />
+
 
 ### ➕ Post an Item
 
-![Add Item](screenshots/add-item.png)
+<img width="1915" height="967" alt="image" src="https://github.com/user-attachments/assets/ee72388b-fc6d-4674-942d-816bea8e6b6c" />
+
+
+<img width="1917" height="968" alt="image" src="https://github.com/user-attachments/assets/61fbc403-749a-4815-8949-3a1640735b03" />
+
 
 ### 📋 Claims
 
-![Claims](screenshots/claims.png)
+<img width="1911" height="960" alt="image" src="https://github.com/user-attachments/assets/4f43155f-2aae-4fd6-b7db-2b21095e0b36" />
+
+
+<img width="1913" height="967" alt="image" src="https://github.com/user-attachments/assets/594fda3b-1c1e-446a-b2cd-0c15469d9651" />
+
 
 ### 🔐 Contact Information Privacy
 
-![Contact Privacy](screenshots/contact-privacy.png)
+<img width="1916" height="962" alt="image" src="https://github.com/user-attachments/assets/c129e033-7055-4327-b4f8-f891e78f1710" />
+
+<img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/93f661f9-a52e-4660-9586-c6948fb692c7" />
+
 
 ### 🔔 Notifications
 
-![Notifications](screenshots/notifications.png)
+<img width="1911" height="973" alt="image" src="https://github.com/user-attachments/assets/4f1404ff-5bb0-48e0-ba55-996d9a2efdf4" />
+
 
 ### 🛡️ Admin Dashboard
 
-![Admin Dashboard](screenshots/admin-dashboard.png)
+<img width="1913" height="970" alt="image" src="https://github.com/user-attachments/assets/7a95eab8-740e-4738-b975-df80c4b03204" />
+
 
 ---
 
