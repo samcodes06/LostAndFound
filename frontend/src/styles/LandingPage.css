@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landing-page {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #0d1324;
+  color: white;
+  overflow: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.landing-navbar {
+  height: 80px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 10;
+
+  background: rgba(13, 19, 36, 0.85);
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.landing-navbar h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #c4c9d4;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* Login */
+
+.nav-links a:nth-child(4) {
+  color: white;
+  padding: 10px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+}
+
+.nav-links a:nth-child(4):hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Sign Up */
+
+.signup-btn {
+  background: white;
+  color: #1b2335 !important;
+  padding: 11px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ================= MAIN ================= */
+
+.landing-main {
+  min-height: calc(100vh - 80px);
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 55%,
+      rgba(77, 54, 150, 0.18),
+      transparent 45%
+    );
+}
+
+/* ================= 3D MOVING LIGHT WAVES ================= */
+
+.glow {
+  position: absolute;
+  left: -30%;
+  width: 160%;
+  height: 120px;
+
+  border-radius: 50%;
+
+  filter: blur(18px);
+  opacity: 0.8;
+
+  pointer-events: none;
+  z-index: 0;
+
+  transform-style: preserve-3d;
+}
+
+
+/* First wave */
+.glow-one {
+  top: 38%;
+
+  background: linear-gradient(
+    90deg,
+    transparent 5%,
+    #2563eb 20%,
+    #7c3aed 40%,
+    #ec4899 55%,
+    #6366f1 70%,
+    transparent 95%
+  );
+
+  box-shadow:
+    0 0 30px #6366f1,
+    0 0 60px #7c3aed,
+    0 0 100px #2563eb;
+
+  transform: perspective(800px)
+             rotateX(55deg)
+             rotateZ(12deg);
+
+  animation: waveOne 6s ease-in-out infinite alternate;
+}
+
+
+/* Second wave */
+.glow-two {
+  top: 50%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #312e81,
+    #7c3aed,
+    #ec4899,
+    #6366f1,
+    transparent
+  );
+
+  box-shadow:
+    0 0 35px #8b5cf6,
+    0 0 80px #ec4899;
+
+  transform: perspective(800px)
+             rotateX(60deg)
+             rotateZ(-10deg);
+
+  animation: waveTwo 8s ease-in-out infinite alternate;
+}
+
+
+/* 3D movement */
+
+@keyframes waveOne {
+  0% {
+    transform:
+      perspective(800px)
+      rotateX(55deg)
+      rotateZ(12deg)
+      translateX(-8%)
+      translateY(0);
+  }
+
+  100% {
+    transform:
+      perspective(800px)
+      rotateX(45deg)
+      rotateZ(18deg)
+      translateX(8%)
+      translateY(-20px);
+  }
+}
+
+
+@keyframes waveTwo {
+  0% {
+    transform:
+      perspective(800px)
+      rotateX(60deg)
+      rotateZ(-10deg)
+      translateX(8%);
+  }
+
+  100% {
+    transform:
+      perspective(800px)
+      rotateX(45deg)
+      rotateZ(-18deg)
+      translateX(-8%);
+  }
+}
+
+
+/* Animation */
+
+@keyframes moveGlowOne {
+  from {
+    transform: rotate(12deg) translateX(-6%);
+  }
+
+  to {
+    transform: rotate(8deg) translateX(6%);
+  }
+}
+
+@keyframes moveGlowTwo {
+  from {
+    transform: rotate(-8deg) translateX(6%);
+  }
+
+  to {
+    transform: rotate(-12deg) translateX(-6%);
+  }
+}
+
+
+/* ================= HERO ================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  animation: fadeUp 1s ease;
+}
+
+
+/* Heading */
+
+.hero-content h1 {
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  line-height: 1.15;
+
+  color: white;
+
+  margin-bottom: 20px;
+
+  text-shadow:
+    0 0 25px rgba(255, 255, 255, 0.12);
+}
+
+
+/* Description */
+
+.hero-content p {
+  max-width: 650px;
+
+  font-size: 18px;
+  line-height: 1.6;
+
+  color: #b8c0d0;
+}
+
+
+/* Hero animation */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .landing-navbar {
+    height: auto;
+    min-height: 70px;
+    padding: 15px 5%;
+  }
+
+  .landing-navbar h2 {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-links a:nth-child(4),
+  .signup-btn {
+    padding: 8px 12px;
+  }
+
+  .landing-main {
+    min-height: calc(100vh - 70px);
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+    letter-spacing: -1px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
