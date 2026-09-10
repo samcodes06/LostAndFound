@@ -24,58 +24,6 @@ Administrators can manage users, item posts, claims, and contact messages throug
 
 ---
 
-# 📸 Application Screenshots
-
-### 🏠 Home 
-
-<img width="1917" height="963" alt="image" src="https://github.com/user-attachments/assets/40abf92b-62b8-42a9-8874-b6b36202957d" />
-
-
-### 🔍 Browse Items
-
-<img width="1912" height="972" alt="image" src="https://github.com/user-attachments/assets/1a705c74-f332-4fe8-9278-616dd71a4200" />
-
-
-### 📦 Item Details
-
-<img width="1908" height="972" alt="image" src="https://github.com/user-attachments/assets/c480847c-8b02-422c-b6b7-58fe81771f28" />
-
-
-### ➕ Post an Item
-
-<img width="1915" height="967" alt="image" src="https://github.com/user-attachments/assets/ee72388b-fc6d-4674-942d-816bea8e6b6c" />
-
-
-<img width="1917" height="968" alt="image" src="https://github.com/user-attachments/assets/61fbc403-749a-4815-8949-3a1640735b03" />
-
-
-### 📋 Claims
-
-<img width="1911" height="960" alt="image" src="https://github.com/user-attachments/assets/4f43155f-2aae-4fd6-b7db-2b21095e0b36" />
-
-
-<img width="1913" height="967" alt="image" src="https://github.com/user-attachments/assets/594fda3b-1c1e-446a-b2cd-0c15469d9651" />
-
-
-### 🔐 Contact Information Privacy
-
-<img width="1916" height="962" alt="image" src="https://github.com/user-attachments/assets/c129e033-7055-4327-b4f8-f891e78f1710" />
-
-<img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/93f661f9-a52e-4660-9586-c6948fb692c7" />
-
-
-### 🔔 Notifications
-
-<img width="1911" height="973" alt="image" src="https://github.com/user-attachments/assets/4f1404ff-5bb0-48e0-ba55-996d9a2efdf4" />
-
-
-### 🛡️ Admin Dashboard
-
-<img width="1913" height="970" alt="image" src="https://github.com/user-attachments/assets/7a95eab8-740e-4738-b975-df80c4b03204" />
-
-
----
-
 # 🔄 Application Workflow
 
 The application is built around a simple **Lost/Found → Claim → Decision → Return** workflow.
@@ -663,6 +611,56 @@ This project demonstrates practical experience with:
 - Admin dashboards
 - Protected frontend and backend routes
 - Git and GitHub version control
+
+---
+
+# 📸 Application Screenshots
+
+### 🏠 Home 
+
+<img width="1917" height="911" alt="image" src="https://github.com/user-attachments/assets/f8e4ce65-94c3-4f1e-8ca8-acca044f68ca" />
+
+
+### 🔍 Browse Items
+
+<img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/87e56fbf-7347-4c9d-ac01-b2df501466d1" />
+
+
+### 📦 Item Details
+
+<img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/bd32dc94-a335-4631-827f-60f1cf32eb41" />
+
+
+### ➕ Post an Item
+
+<img width="1915" height="907" alt="image" src="https://github.com/user-attachments/assets/48230c9f-3ef4-4146-99e6-6f03fa2f11fe" />
+
+<img width="1917" height="907" alt="image" src="https://github.com/user-attachments/assets/73b79547-1726-41e8-96c1-de4c94aecb82" />
+
+
+### 📋 Claims
+
+<img width="1912" height="910" alt="image" src="https://github.com/user-attachments/assets/cdab0c0c-7962-4ee2-ad1d-1ef2cc9d39af" />
+
+<img width="1915" height="911" alt="image" src="https://github.com/user-attachments/assets/3e8073b5-3432-4dec-b3f8-6cea6c1e6aba" />
+
+
+### 🔐 Contact Information Privacy
+
+<img width="1917" height="903" alt="image" src="https://github.com/user-attachments/assets/1cf79e6c-58e3-4707-a8c7-af62c450b860" />
+
+<img width="1912" height="900" alt="image" src="https://github.com/user-attachments/assets/59ffc697-e624-4a4e-a3af-5dfd57af8ddc" />
+
+
+### 🔔 Notifications
+
+<img width="1915" height="907" alt="image" src="https://github.com/user-attachments/assets/bf95ecf6-79c3-49a7-b826-eec3675cac14" />
+
+
+### 🛡️ Admin Dashboard
+
+<img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/d6a3d9a5-e628-4736-91a2-81d3b3905c3a" />
+
 
 ---
 
