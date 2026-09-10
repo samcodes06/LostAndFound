@@ -24,6 +24,42 @@ Administrators can manage users, item posts, claims, and contact messages throug
 
 ---
 
+# 📸 Application Screenshots
+
+### 🏠 Home / Dashboard
+
+![Home Dashboard](screenshots/home.png)
+
+### 🔍 Browse Items
+
+![Browse Items](screenshots/browse-items.png)
+
+### 📦 Item Details
+
+![Item Details](screenshots/item-details.png)
+
+### ➕ Post an Item
+
+![Add Item](screenshots/add-item.png)
+
+### 📋 Claims
+
+![Claims](screenshots/claims.png)
+
+### 🔐 Contact Information Privacy
+
+![Contact Privacy](screenshots/contact-privacy.png)
+
+### 🔔 Notifications
+
+![Notifications](screenshots/notifications.png)
+
+### 🛡️ Admin Dashboard
+
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+---
+
 # 🔄 Application Workflow
 
 The application is built around a simple **Lost/Found → Claim → Decision → Return** workflow.
@@ -373,6 +409,16 @@ LostAndFound/
 │   ├── public/
 │   └── package.json
 │
+├── screenshots/
+│   ├── home.png
+│   ├── browse-items.png
+│   ├── item-details.png
+│   ├── add-item.png
+│   ├── claims.png
+│   ├── contact-privacy.png
+│   ├── notifications.png
+│   └── admin-dashboard.png
+│
 ├── .gitignore
 └── README.md
 ```
@@ -601,31 +647,6 @@ This project demonstrates practical experience with:
 - Admin dashboards
 - Protected frontend and backend routes
 - Git and GitHub version control
-
----
-
-# 📈 Project Status
-
-The core Lost & Found application is implemented, including:
-
-- User authentication
-- Item management
-- Multiple image uploads
-- Optional video uploads
-- Search and filtering
-- Claims
-- Claim approval/rejection
-- Contact information privacy
-- Notifications
-- Item return workflow
-- User profiles
-- Admin dashboard
-- User management
-- Item management
-- Claim management
-- Contact message management
-
-The project is maintained with the frontend and backend organized as separate applications within the same repository.
 
 ---
 
