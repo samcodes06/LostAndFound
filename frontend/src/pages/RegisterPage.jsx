@@ -35,7 +35,7 @@ function RegisterPage() {
       setUsernameStatus("checking");
 
       const response = await fetch(
-        `http://localhost:5000/api/auth/generate-username?name=${encodeURIComponent(
+        `${import.meta.env.VITE_API_URL}/auth/generate-username?name=${encodeURIComponent(
           name.trim()
         )}`
       );
@@ -70,7 +70,7 @@ function RegisterPage() {
       setUsernameStatus("checking");
 
       const response = await fetch(
-        `http://localhost:5000/api/auth/check-username?username=${encodeURIComponent(
+        `${import.meta.env.VITE_API_URL}/auth/check-username?username=${encodeURIComponent(
           username.trim()
         )}`
       );
@@ -136,7 +136,7 @@ function RegisterPage() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        `${import.meta.env.VITE_API_URL}/auth/register`,
         {
           method: "POST",
           headers: {
