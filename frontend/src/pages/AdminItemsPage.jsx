@@ -6,6 +6,9 @@ import "../styles/AdminItemsPage.css";
 function AdminItemsPage() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [deleteItem, setDeleteItem] = useState(null);
+  const [message, setMessage] = useState(null);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,10 +18,13 @@ function AdminItemsPage() {
         setItems(response.data.items || []);
       } catch (error) {
         console.error("Failed to fetch items:", error);
-        alert(
-          error.response?.data?.message ||
-          "Failed to load items"
-        );
+
+        setMessage({
+          type: "error",
+          text:
+            error.response?.data?.message ||
+            "Failed to load items",
+        });
       } finally {
         setLoading(false);
       }
@@ -27,28 +33,35 @@ function AdminItemsPage() {
     getItems();
   }, []);
 
-  const handleDelete = async (itemId, itemName) => {
-    const confirmDelete = window.confirm(
-      `Are you sure you want to delete "${itemName}"?`
-    );
-
-    if (!confirmDelete) return;
+  const handleDelete = async () => {
+    if (!deleteItem) return;
 
     try {
-      await api.delete(`/admin/items/${itemId}`);
+      await api.delete(`/admin/items/${deleteItem._id}`);
 
       setItems((prevItems) =>
-        prevItems.filter((item) => item._id !== itemId)
+        prevItems.filter(
+          (item) => item._id !== deleteItem._id
+        )
       );
 
-      alert("Item deleted successfully");
+      setDeleteItem(null);
+
+      setMessage({
+        type: "success",
+        text: "Item deleted successfully",
+      });
     } catch (error) {
       console.error("Failed to delete item:", error);
 
-      alert(
-        error.response?.data?.message ||
-        "Failed to delete item"
-      );
+      setDeleteItem(null);
+
+      setMessage({
+        type: "error",
+        text:
+          error.response?.data?.message ||
+          "Failed to delete item",
+      });
     }
   };
 
@@ -75,11 +88,28 @@ function AdminItemsPage() {
   return (
     <div className="admin-items-page">
 
+      {/* In-App Message */}
+      {message && (
+        <div className={`admin-message ${message.type}`}>
+          <span>{message.text}</span>
+
+          <button
+            className="admin-message-close"
+            onClick={() => setMessage(null)}
+            aria-label="Close message"
+          >
+            ×
+          </button>
+        </div>
+      )}
+
       {/* Header */}
       <div className="admin-items-header">
         <div>
           <h1>Manage Items</h1>
-          <p>View and manage all items posted by users.</p>
+          <p>
+            View and manage all items posted by users.
+          </p>
         </div>
 
         <button
@@ -119,8 +149,12 @@ function AdminItemsPage() {
       {items.length === 0 ? (
         <div className="admin-items-empty">
           <div>📦</div>
+
           <h2>No items found</h2>
-          <p>There are currently no items posted by users.</p>
+
+          <p>
+            There are currently no items posted by users.
+          </p>
         </div>
       ) : (
         <div className="admin-items-table-container">
@@ -206,6 +240,7 @@ function AdminItemsPage() {
                         <strong>
                           {item.postedBy.name}
                         </strong>
+
                         <span>
                           @{item.postedBy.username}
                         </span>
@@ -232,12 +267,7 @@ function AdminItemsPage() {
 
                       <button
                         className="delete-item-btn"
-                        onClick={() =>
-                          handleDelete(
-                            item._id,
-                            item.itemName
-                          )
-                        }
+                        onClick={() => setDeleteItem(item)}
                       >
                         Delete
                       </button>
@@ -251,6 +281,49 @@ function AdminItemsPage() {
             </tbody>
 
           </table>
+
+        </div>
+      )}
+
+      {/* Delete Confirmation Modal */}
+      {deleteItem && (
+        <div className="delete-modal-overlay">
+
+          <div className="delete-modal">
+
+            <div className="delete-modal-icon">
+              ⚠️
+            </div>
+
+            <h2>Delete Item?</h2>
+
+            <p>
+              Are you sure you want to delete{" "}
+              <strong>
+                "{deleteItem.itemName}"
+              </strong>
+              ?
+            </p>
+
+            <div className="delete-modal-actions">
+
+              <button
+                className="delete-modal-cancel"
+                onClick={() => setDeleteItem(null)}
+              >
+                Cancel
+              </button>
+
+              <button
+                className="delete-modal-confirm"
+                onClick={handleDelete}
+              >
+                Delete
+              </button>
+
+            </div>
+
+          </div>
 
         </div>
       )}
